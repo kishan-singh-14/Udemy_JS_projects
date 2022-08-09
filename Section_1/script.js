@@ -22,7 +22,7 @@ else {
     displayString = "Mark's BMI is higher than John's!";
 }
 document.getElementById('challenge1').innerText = displayString;
-*/
+
 
 // challenge 3
 
@@ -43,4 +43,9 @@ else {
 }
 console.log(koalas, dolphins);
 document.getElementById('challenge1').innerText = displayString;
- 
+*/
+
+const billAmount = 400;
+const tip = (billAmount>=50 && billAmount<=300)? billAmount * 0.15 : billAmount * 0.20;
+const displayString = 'The bill amount is ' + billAmount + ', the tip is ' + tip + ' and the total amount is ' + Number(billAmount + tip);
+document.getElementById('challenge1').innerText = displayString;
