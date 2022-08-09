@@ -9,3 +9,4 @@ let johnBMI = johnsWeight / johnsHeight ** 2;
 const markHigherBMI = markBMI > johnBMI;
 document.getElementById('challenge1').innerText = String(markBMI) + johnBMI + markHigherBMI;
 console.log(markBMI, johnBMI, markHigherBMI);
+console.log("Trail 1");
