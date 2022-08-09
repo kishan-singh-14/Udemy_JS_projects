@@ -6,7 +6,19 @@ const johnsHeight = 1.88;
 let markBMI = marksWeight / (marksHeight * marksHeight);
 let johnBMI = johnsWeight / johnsHeight ** 2;
 
-const markHigherBMI = markBMI > johnBMI;
+// challenge 1
+/*const markHigherBMI = markBMI > johnBMI;
 document.getElementById('challenge1').innerText = String(markBMI) + johnBMI + markHigherBMI;
 console.log(markBMI, johnBMI, markHigherBMI);
-console.log("Trail 1");
+*/
+
+// challenge 2
+let displayString;
+if (markBMI > johnBMI) {
+    displayString = "Mark's BMI is higher than John's!";
+}
+else {
+    displayString = "Mark's BMI is higher than John's!";
+}
+document.getElementById('challenge1').innerText = displayString;
+
