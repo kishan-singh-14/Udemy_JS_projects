@@ -31,7 +31,6 @@ for (let i=0; i<bills.length; i++) {
 }
 console.log('Tips are ' + tips);
 console.log('Total amount is ' + totalAmount);
-*/
 
 const mark = {
     name: 'Mark Miller',
@@ -60,3 +59,30 @@ console.log(`${john.name} has a bmi of ${john.calcBMI()}.`);
 if (mark.bmi > john.bmi) console.log(`${mark.name}'s BMI(${mark.bmi}) is greater than ${john.name}'s BMI(${john.bmi}).`);
 else if (mark.bmi < john.bmi) console.log(`${john.name}'s BMI(${john.bmi}) is greater than ${mark.name}'s BMI(${mark.bmi}).`);
 else console.log("Both have the same BMI.");
+*/
+
+const bills = [22,295,176,440,37,105,10,1100,86,52];
+const tips = [];
+const total = [];
+
+const calcTip = function (billAmount) {
+    const tip = (billAmount>=50 && billAmount<=300)? billAmount * 0.15 : billAmount * 0.20;
+    return tip;
+}
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i<arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum/arr.length;
+}
+
+for (let i=0; i<bills.length;i++) {
+    tips.push(calcTip(bills[i]));
+    total.push(bills[i] + calcTip(bills[i]));
+}
+
+console.log(calcAverage(bills));
+console.log(tips);
+console.log(total);
