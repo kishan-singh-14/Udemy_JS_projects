@@ -59,7 +59,7 @@ console.log(`${john.name} has a bmi of ${john.calcBMI()}.`);
 if (mark.bmi > john.bmi) console.log(`${mark.name}'s BMI(${mark.bmi}) is greater than ${john.name}'s BMI(${john.bmi}).`);
 else if (mark.bmi < john.bmi) console.log(`${john.name}'s BMI(${john.bmi}) is greater than ${mark.name}'s BMI(${mark.bmi}).`);
 else console.log("Both have the same BMI.");
-*/
+
 
 const bills = [22,295,176,440,37,105,10,1100,86,52];
 const tips = [];
@@ -86,3 +86,19 @@ for (let i=0; i<bills.length;i++) {
 console.log(calcAverage(bills));
 console.log(tips);
 console.log(total);
+*/
+
+const printfForecast = function (temps) {
+    let textDisplay = 'The foreast for the upcoming days reads';
+    for (let i=0; i <temps.length-1; i++)
+    {
+        textDisplay += `${temps[0]}\u00B0C in ${i+1} days, `;
+    }
+    textDisplay += `and ${temps[temps.length-1]}\u00B0C in ${temps.length} days.`;
+    console.log(textDisplay);
+}
+
+const tempArray1 = [17,21,23];
+const tempArray2 = [12,5,-5,0,4];
+printfForecast(tempArray1);
+printfForecast(tempArray2);
